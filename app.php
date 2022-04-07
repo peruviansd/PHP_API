@@ -1,5 +1,6 @@
 <?php
 class App{
+    // hola que tal?
     public function  __construct($params, $body, $method){
      
         $nom_controlador = strtolower(array_shift($params));
