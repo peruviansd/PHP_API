@@ -1,10 +1,10 @@
 <?php
 class App{
-    // hola que tal?
-    public function  __construct($params, $body, $method){
+    
+    public function  __construct($params, $body, $method, $x_api_key=""){
      
         $nom_controlador = strtolower(array_shift($params));
-       
+        array_unshift($params, $x_api_key);
         array_unshift($params, $method);
   
         $archivo="./controlador/".$nom_controlador.".php";

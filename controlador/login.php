@@ -8,7 +8,7 @@ class Login{
 
 
     public function __construct($params, $body){
-        
+      
         $method = array_shift($params);
         switch ($method){
             case "POST":
@@ -30,13 +30,14 @@ class Login{
         $json = new stdClass(); 
         
         if($correct){
-          
+            
+           
             $this->user = $userModelo;
             $this->uuid = $this->generateUUID();
-
+            
             require("./model/apikey.php");
             $apikey = new Apikey();
-            $apikey->add($this->user["id"],$this->uuid);
+            $apikey->add($this->user["userId"],$this->uuid);
            
             
            
@@ -47,10 +48,7 @@ class Login{
             $json->error = "incorrect password";
 
         }
-
-       
         require_once("./vista/users_vista.php");
-
     }
 
           

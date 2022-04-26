@@ -56,13 +56,16 @@
             
         }
 
+        public function getUserByApiKey($api_key){
+
+            $consulta = "SELECT userId FROM events.api_key where api_key='$api_key'";
+            $result = $this->db->query($consulta); 
+            $user = $result->fetch();
+            return $user["userId"];
+            
+        }
+
     }
-
-
-  
-    
-   
-    
 
   
 

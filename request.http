@@ -1,20 +1,21 @@
-POST http://localhost/Events/login
+POST http://localhost/events/login
 Content-Type: "application/json"
 
 {
-    "username": "javier",
-    "password": "javier"
+    "username": "gerald",
+    "password": "gerald"
 
 }
 
 ###
 
-POST  http://localhost/Events/users
+POST  http://localhost/events/users
 Content-Type: "application/json"
 
 {
-    "username": "xavi_01",
-    "password": "hola",
+    "username": "gerald",
+    "password": "gerald",
     "city": "barcelona",
     "country": "spain"
+    
 }

@@ -9,12 +9,12 @@
             $this->db=Connexion::connectar();
         }
         
-        public function add($UserId,$value){
+        public function add($userId,$value){
             
-            $consulta = "INSERT INTO events.api_key ( id, api_key) VALUES( :id, :api_key)";
+            $consulta = "INSERT INTO events.api_key ( userId, api_key) VALUES( :userId, :api_key)";
             
             $dades = [
-                'id'=>$UserId,
+                'userId'=>$userId,
                 'api_key'=>$value
                 
             ];
