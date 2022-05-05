@@ -45,6 +45,15 @@
          
         }
 
+        private function getEvents(){
+
+            $model = new Events_model();
+            $events = $model->getAllEvents();
+
+            header("Content-Type: application/json; charset=utf-8");
+            echo json_encode($events).PHP_EOL;
+        }
+
         
     }
 

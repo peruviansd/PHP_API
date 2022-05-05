@@ -46,6 +46,16 @@
 
             return $event["eventId"];
         }
+
+        public function getALlEvents(){
+            $consulta = "SELECT * FROM events.events";
+            $result = $this->db->query($consulta);
+            while ($fila=$result->fetch(PDO::FETCH_ASSOC)){
+                $this->events[]=$fila;
+            }
+            return $this->events;
+
+        }
     }
 
 ?>
